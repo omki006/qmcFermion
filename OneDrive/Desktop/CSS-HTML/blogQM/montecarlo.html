@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monte Carlo Methods & Fermion Sign Problem</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Monte Carlo Methods & The Fermion Sign Problem</h1>
+        <p>Understanding Quantum Monte Carlo and the challenges of simulating fermions</p>
+        <nav>
+            <a href="index.html">🔙 Back to Simulation</a>
+        </nav>
+    </header>
+
+    <section id="monte-carlo">
+        <h2>🎲 What is Monte Carlo Simulation?</h2>
+        <p>
+            Monte Carlo methods are a class of computational algorithms that rely on **random sampling** 
+            to obtain numerical results. They are widely used in physics, finance, and engineering.
+        </p>
+        <p>
+            The key idea is to **approximate complex integrals** using statistical techniques. 
+            In quantum mechanics, this is used to solve the **Schrödinger equation** for many-particle systems.
+        </p>
+    </section>
+
+    <section id="qmc">
+        <h2>🔬 Quantum Monte Carlo (QMC) Methods</h2>
+        <p>QMC methods apply Monte Carlo techniques to quantum systems. The most important methods are:</p>
+        <ul>
+            <li><strong>Variational Monte Carlo (VMC)</strong> – Uses **trial wavefunctions** to approximate the ground state.</li>
+            <li><strong>Diffusion Monte Carlo (DMC)</strong> – Uses **stochastic diffusion** to refine the wavefunction.</li>
+            <li><strong>Path Integral Monte Carlo (PIMC)</strong> – Uses **Feynman’s path integrals** for thermodynamic properties.</li>
+        </ul>
+    </section>
+
+    <section id="fermion-sign">
+        <h2>⚠️ The Fermion Sign Problem</h2>
+        <p>
+            The **Fermion Sign Problem** arises because **fermionic wavefunctions** are 
+            **antisymmetric** under particle exchange. This leads to <strong>positive and negative contributions</strong> 
+            in Quantum Monte Carlo, causing <strong>exponential variance growth</strong>.
+        </p>
+        <h3>🚧 Why QMC Works for Bosons but Not Fermions</h3>
+        <p>
+            - **Bosons**: Wavefunctions are **symmetric**, meaning all probabilities add constructively.  
+            - **Fermions**: Wavefunctions are **antisymmetric**, leading to cancellations between positive and negative probabilities.
+        </p>
+
+        <h3>🚀 Solutions to the Sign Problem</h3>
+        <ul>
+            <li><strong>Fixed-Node Approximation</strong>: Restricts walkers to a known nodal surface.</li>
+            <li><strong>Auxiliary Field Methods</strong>: Introduces extra degrees of freedom to stabilize calculations.</li>
+            <li><strong>Reweighting Techniques</strong>: Attempts to compensate for sign cancellations.</li>
+        </ul>
+    </section>
+
+    <section id="conclusion">
+        <h2>🎯 Summary</h2>
+        <p>
+            Quantum Monte Carlo methods are powerful tools, but the Fermion Sign Problem 
+            remains a major challenge. Advances in **fixed-node approximations, auxiliary field methods, and reweighting** 
+            help mitigate the issue, but a full solution is still an open problem in computational physics.
+        </p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Quantum Simulations | <a href="index.html">Back to Simulation</a></p>
+    </footer>
+</body>
+</html>

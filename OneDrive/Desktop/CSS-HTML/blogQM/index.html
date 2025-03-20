@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fermion Sign Problem Visualization</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Fermion Sign Problem in Quantum Monte Carlo</h1>
+        <p>Interactive visualization of quantum particles and the sign problem.</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <div class="nav-bar">
+        <a href="montecarlo.html">📖 Learn More: Monte Carlo & Fermion Sign Problem</a>
+    </div>
+
+    <!-- Content Section -->
+    <section id="content">
+        <h2>🌌 Understanding the Fermion Sign Problem</h2>
+        <p>
+            In Quantum Monte Carlo (QMC), we use stochastic methods to solve quantum systems. 
+            For **bosons**, this works well, but for **fermions**, we run into a challenge: 
+            the <strong>Fermion Sign Problem</strong>. 
+        </p>
+        <p>
+            Fermionic wavefunctions **change sign** under particle exchange, leading to cancellations 
+            that cause exponential variance in Monte Carlo simulations. This makes computing 
+            properties of fermionic systems extremely difficult.
+        </p>
+
+        <h2>🧬 Why is This Important?</h2>
+        <ul>
+            <li>✅ Helps understand **electrons in atoms & molecules**.</li>
+            <li>✅ Crucial for **condensed matter physics**.</li>
+            <li>✅ Used in **quantum chemistry & materials science**.</li>
+        </ul>
+    </section>
+
+    <!-- Interactive Simulation -->
+    <section id="simulation">
+        <h2>🎮 Interactive 3D Simulation</h2>
+        <div id="controls">
+            <label>Number of Fermions:</label>
+            <input type="number" id="fermionCount" value="100" min="10" max="500">
+            <button onclick="updateParticles()">Update</button>
+        </div>
+        <div id="canvas-container"></div>
+    </section>
+
+    <!-- Solution and Explanation -->
+    <div id="solution">
+        <p><strong>Fermion Sign Problem Overview:</strong></p>
+        <p>
+            The fermion sign problem arises in quantum Monte Carlo simulations when calculating the expectation values of observables for systems of fermions. 
+            The problem occurs because the sign of the wave function changes under particle exchanges, making it difficult to sample configurations efficiently.
+        </p>
+        <p><strong>Current Fermion Count:</strong> <span id="currentCount">100</span></p>
+        <p><strong>Fermion States:</strong> <span id="fermionStates">Not calculated</span></p>
+    </div>
+
+    <!-- Importing Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
